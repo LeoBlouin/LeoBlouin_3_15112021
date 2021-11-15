@@ -1,0 +1,43 @@
+/* Variables */
+:root {
+  --primary: #9356dc;
+  --secondary: #ff79da;
+  --third: #99e2d0;
+}
+
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Shrikhand', sans-serif;
+}
+
+h2 {
+  font-family: 'Shrikhand', sans-serif;
+}
+
+h3 {
+  font-family: 'Shrikhand', sans-serif;
+}
+
+h4 {
+  font-family: 'Shrikhand', sans-serif;
+}
+
+h5 {
+  font-family: 'Shrikhand', sans-serif;
+}
+
+h6 {
+  font-family: 'Shrikhand', sans-serif;
+}
+/*# sourceMappingURL=styles.css.map */
