@@ -110,13 +110,44 @@ header {
 
 header a {
   color: #000;
-  margin-right: auto;
 }
 
-.fa-heart {
+header h1 {
+  margin: auto;
+}
+
+.heart {
+  position: relative;
+}
+
+.heart .fa-heart {
   cursor: pointer;
   font-size: 1.3rem;
   margin-right: 15px;
+}
+
+.heart .fas {
+  position: absolute;
+  color: #f21361;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+.heart .far {
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.heart:hover .fas {
+  opacity: 1;
+}
+
+.heart:hover .far {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .imgCover {
@@ -170,12 +201,26 @@ header a {
 }
 
 .menu li {
+  opacity: 0;
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
   background-color: #fff;
   border-radius: 15px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
   padding: 10px 15px;
+  -webkit-animation: fade ease 1s forwards;
+          animation: fade ease 1s forwards;
+}
+
+.menu li h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menu li .descriptionPrice {
@@ -187,14 +232,113 @@ header a {
           justify-content: space-between;
 }
 
+.menu li .descriptionPrice p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .menu li .descriptionPrice span {
   font-weight: bold;
+  -webkit-transition: -webkit-transform 600ms ease;
+  transition: -webkit-transform 600ms ease;
+  transition: transform 600ms ease;
+  transition: transform 600ms ease, -webkit-transform 600ms ease;
+}
+
+.menu li .iconMenu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #99e2d0;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  -webkit-transition: -webkit-transform 600ms ease;
+  transition: -webkit-transform 600ms ease;
+  transition: transform 600ms ease;
+  transition: transform 600ms ease, -webkit-transform 600ms ease;
+}
+
+.menu li .iconMenu i {
+  -webkit-transition: -webkit-transform 600ms ease;
+  transition: -webkit-transform 600ms ease;
+  transition: transform 600ms ease;
+  transition: transform 600ms ease, -webkit-transform 600ms ease;
+}
+
+.menu li:hover h4,
+.menu li:hover p {
+  max-width: 170px;
+}
+
+.menu li:hover .descriptionPrice span {
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+}
+
+.menu li:hover .iconMenu {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu li:hover .iconMenu i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .menu button {
   display: block;
   margin: 50px auto 30px;
   width: 150px;
+}
+
+.menu li:nth-child(1) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.menu li:nth-child(2) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.menu li:nth-child(3) {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.menu li:nth-child(4) {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+@-webkit-keyframes fade {
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
 }
 
 .btn-gradient {
@@ -207,6 +351,17 @@ header a {
   -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   border: 0;
+  -webkit-transition: -webkit-box-shadow 250ms ease;
+  transition: -webkit-box-shadow 250ms ease;
+  transition: box-shadow 250ms ease;
+  transition: box-shadow 250ms ease, -webkit-box-shadow 250ms ease;
+  cursor: pointer;
+}
+
+.btn-gradient:hover {
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(170deg, rgba(255, 121, 218, 0.85) 0%, rgba(147, 86, 220, 0.85) 100%);
 }
 
 .location {
