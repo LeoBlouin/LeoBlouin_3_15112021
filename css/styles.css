@@ -446,6 +446,10 @@ header h1 {
   background-color: #f6f6f6;
 }
 
+#restaurants .container {
+  max-width: 1280px;
+}
+
 #restaurants ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -531,5 +535,21 @@ footer a {
 footer a i {
   margin-right: 20px;
   width: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  #restaurants ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #restaurants .card-img {
+    min-height: 300px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
